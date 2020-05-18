@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB | JS: Mars Rover Kata</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="pannel" class="pannel">
+        <div id="mars-landscape" class="mars-landscape">
+            <div id="mars-grid" class="mars-grid">
+                <div id="rover" class="rover">
+                    <img src="./img/rover.png" alt="rover">
+                </div>
+            </div>
+        </div>
+        <div class="pannel-info">
+            <div class="pannel-info_tab"></div>
+            <div class="pannel_controls">
+                <div class="pannel_controls_direction">
+                    <h3 class="pannel_controls_direction_title">Rover Orientation</h3>
+                    <div class="pannel_controls_wrapper">
+                        <button id="L" type="button" class="pannel_controls_turnLeft">
+                            <img src="./img/turnLeftArrow.png" alt="turnLeftArrow">
+                        </button>
+                        <div class="pannel_controls_rover">
+                            <div class="pannel_controls_rover_compas">
+                                <span class="compas_n">N</span>
+                                <span class="compas_o">O</span>
+                                <span class="compas_w">W</span>
+                                <span class="compas_s">S</span>
+                            </div>
+                            <div id="compas" class="miniRover">
+                                <div class="miniRover_body">
+                                    <div class="miniRover_head"></div>
+                                    <div class="miniRover_circle"></div>
+                                    <div class="miniRover_back"></div>
+                                </div>
+                                <div class="miniRover_wheels">
+                                    <div class="wheel"></div>
+                                    <div class="wheel"></div>
+                                    <div class="wheel"></div>
+                                    <div class="wheel"></div>
+                                    <div class="wheel"></div>
+                                    <div class="wheel"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <button id="R" type="button" class="pannel_controls_turnRight">
+                            <img src="./img/turnRightArrow.png" alt="turnLeftArrow">
+                        </button>
+                    </div>
+                </div>
+                <div class="pannel_controls_movement">
+                    <button id="f" class="forwardControl" type="button"></button>
+                    <button id="b" class="backControl" type="button"></button>
+                    <div class="pannel_controls_movement_switch">
+                        
+                        <div class="lever_guide">
+                            <span>FORWARD</span>
+                            <span class="lever_guide_bar">
+                                <div class="lever_guide_switch"></div>
+                            </span>
+                            <span>BACKWARD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pannel-screen">
+                <div id="tab-status-content" class="pannel-screen_content pannel-status">
+                    <div class="pannel-screen_roverStatus">
+                        <div id="roverStatusContent" class="screen_roverStatus_rover">
+                            <div class="screen_roverStatus_rover360">
+                                <img src="./img/rover_360.gif" alt="rover 360º">
+                            </div>
+                        </div>
+                        <div class="screen_roverStatus_position">
+                            <h4>Current Position</h4>
+                            <div class="screen_roverStatus_position_cordinates">
+                                <div>
+                                    <span>X</span>
+                                    <span id="xCordinate">0</span>
+                                </div>
+                                <div>
+                                    <span>Y</span>
+                                    <span id="yCordinate">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen_roverStatus_rover_data">
+                        <div id="battery">
+                            <div>Energy</div>
+                            <div>
+                                <span id="battery_value"></span>
+                                <span id="battery_value_bar"></span>
+                            </div>
+                        </div>
+                        <div id="shield">
+                            <div>Integrity</div>
+                            <div>
+                                <span id="shield_value"></span>
+                                <span id="shield_value_bar"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-route-content" class="pannel-screen_content pannel-route">
+                    <div class="pannel-route_content">
+                        <h3>Create your own route</h3>
+                        <p class="explanation">Use this commands: <strong>'F'</strong>: forward, <strong>'B'</strong>: backward, <strong>'L'</strong>: turn left, <strong>'R'</strong>: tur right</p>
+                        <div class="form">
+                            <input type="text" name="routeForm" id="routeFormInput" placeholder="Write your commands">
+                            <button type="button" id="routeForm">Start</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="pannel-screen_tabs">
+                    <ul>
+                        <li>
+                            <button id="tab-status" type="button">Rover Status</button>
+                        </li>
+                        <li>
+                            <button id="tab-route" type="button">Create Route</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/code.js"></script>
+</body>
+</html>
